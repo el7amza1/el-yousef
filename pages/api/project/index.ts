@@ -1,12 +1,13 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from 'next'
 import { prisma } from "../../../lib/prisma";
+import { Project } from '../../../types';
 
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<any>
 ) {
-    const {name,location,id}= req.body
+    const {name,location,id}:Project = req.body
     switch (
       req.method
     ){

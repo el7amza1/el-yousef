@@ -9,7 +9,11 @@ export interface User {
     type: string
   
   }
-
+export interface Project{
+    id? : number ,
+    name : string,
+    location : string
+}
   export interface Data {
     user:User
   }
