@@ -15,6 +15,7 @@ model User {
   phone String?
   lastName String?
   image String?
+  type String?
   password String
   projects Site[]
 }
