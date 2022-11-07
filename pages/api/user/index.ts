@@ -2,11 +2,22 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 import { prisma } from "../../../lib/prisma";
 
+export interface User {
+  email : string,
+  id   : String ,
+  firstName :  String,
+  phone : String,
+  lastName : String,
+  image :String,
+  password : String,
+  type: String
+
+}
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<any>
 ) {
-    const {email , firstName,lastName ,password ,image , type ,id }= req.body
+    const {email , firstName,lastName ,password ,image , type ,id } : User= req.body
     switch (
       req.method
     ){
