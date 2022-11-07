@@ -8,7 +8,7 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<any>
 ) {
-    const {email , firstName,lastName ,password ,image , type ,id } : User= req.body
+    const {email , firstName,lastName ,password ,image  ,id } : User= req.body
     switch (
       req.method
     ){
@@ -24,7 +24,7 @@ export default async function handler(
       try {
         const newUser  = await prisma.user.create({
           data : {
-            email , firstName,lastName ,password ,image , type , id:id!
+            email , firstName,lastName ,password ,image  , id:id!
           }
         })
         res.status(200).json({newUser})
