@@ -21,7 +21,7 @@ export default async function handler(
       try {
         const newProject = await prisma.project.create({
           data : {
-            name ,location, 
+            name ,location, id
           }
         })
         res.status(200).json({newProject})
