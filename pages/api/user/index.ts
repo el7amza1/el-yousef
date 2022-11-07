@@ -13,8 +13,7 @@ export default async function handler(
       req.method
     ){
       case "GET" :
-        const user = await prisma.user.findMany({
-          where:{email}  }) 
+        const user = await prisma.user.findMany() 
           if (!user ){
             return res.status(400).json("user not found!")
           } 
