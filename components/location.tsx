@@ -62,8 +62,8 @@ function classNames(...classes:any ) {
 export default function Location({projects}:{projects:Project[]}) {
   return (
     <div className="divide-y divide-gray-200 overflow-hidden rounded-lg bg-gray-200 shadow sm:grid sm:grid-cols-2 sm:gap-px sm:divide-y-0 my-5">
-      {projects.map((ele) => (
-        <div>
+      {projects.map((ele,inx) => (
+        <div key={inx}>
         {ele.name}
         
         </div>
