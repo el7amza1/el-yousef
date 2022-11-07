@@ -11,8 +11,7 @@ export default async function handler(
       req.method
     ){
       case "GET" :
-        const project = await prisma.project.findMany({
-          where:{id} }) 
+        const project = await prisma.project.findMany() 
           if (!project ){
             return res.status(400).json("user not found!")
           } 
